@@ -11,7 +11,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
-@Configuration
+//@Configuration
 public class ListenerRegistrationConfig implements BeanPostProcessor {
 
 

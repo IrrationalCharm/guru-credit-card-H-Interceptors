@@ -8,7 +8,7 @@ import java.util.Base64;
 @Service
 public class EncryptionServiceImpl implements EncryptionService {
     @Override
-    public String encrpyt(String freeText) {
+    public String encrypt(String freeText) {
         return Base64.getEncoder().encodeToString(freeText.getBytes(StandardCharsets.UTF_8));
     }
 

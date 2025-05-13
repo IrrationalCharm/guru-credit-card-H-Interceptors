@@ -3,7 +3,6 @@ package guru.springframework.creditcard.interceptors;
 import guru.springframework.creditcard.services.EncryptionService;
 import org.hibernate.EmptyInterceptor;
 import org.hibernate.type.Type;
-import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.io.Serializable;
@@ -55,7 +54,7 @@ public class EncryptionInterceptor extends EmptyInterceptor {
                 if (propertyNames[i].equals(field)) {
                     if (StringUtils.hasText(state[i].toString())) {
                         if ("onSave".equals(type) || "onFlushDirty".equals(type)) {
-                            state[i] = encryptionService.encrpyt(state[i].toString());
+                            state[i] = encryptionService.encrypt(state[i].toString());
                         } else if ("onLoad".equals(type)) {
                             state[i] = encryptionService.decrypt(state[i].toString());
                         }

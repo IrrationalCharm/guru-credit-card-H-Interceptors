@@ -2,7 +2,7 @@ package guru.springframework.creditcard.services;
 
 public interface EncryptionService {
 
-    String encrpyt(String freeText);
+    String encrypt(String freeText);
 
     String decrypt(String encryptedText);
 }
